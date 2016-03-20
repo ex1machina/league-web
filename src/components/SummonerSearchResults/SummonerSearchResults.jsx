@@ -17,5 +17,6 @@ export default React.createClass({
 
 const paperStyle = {
   marginTop: 20,
-  padding: 20
+  padding: 20,
+  width: '100%'
 }
