@@ -24,6 +24,13 @@ function summonerRequestFailed(error) {
   }
 }
 
+export const CLEAR_SUMMONER = 'CLEAR_SUMMONER'
+export function clearSummoner() {
+  return {
+    type: CLEAR_SUMMONER
+  }
+}
+
 export function getSummoner(name) {
   return function(dispatch) {
     dispatch(requestSummoner(name))

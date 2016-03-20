@@ -1,4 +1,9 @@
-import { REQUEST_SUMMONER, SUMMONER_RECIEVED, SUMMONER_REQUEST_FAILED } from 'actions/summoner'
+import {
+  REQUEST_SUMMONER,
+  SUMMONER_RECIEVED,
+  SUMMONER_REQUEST_FAILED,
+  CLEAR_SUMMONER
+} from 'actions/summoner'
 
 const defaultState = {
   isFetching: false,
@@ -25,6 +30,12 @@ export default function _summoner(state = defaultState, action) {
         isFetching: false,
         summoner: null,
         error: action.error
+      })
+    case CLEAR_SUMMONER:
+      return Object.assign({}, state, {
+        isFetching: false,
+        summoner: null,
+        error: null
       })
     default:
       return state
