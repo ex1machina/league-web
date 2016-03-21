@@ -34,7 +34,7 @@ Reducers handle incoming actions and are pure functions that return new instance
 React components that are unaware of redux
 
 #### Containers
-Redux-aware react components that have been bound injected with action dispatch methods and store state data
+Redux-aware react components that have been injected with action dispatch methods and store state data via `react-redux`
 
 ## Build & development
 
