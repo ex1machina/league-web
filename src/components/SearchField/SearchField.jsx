@@ -14,6 +14,7 @@ export default React.createClass({
   },
 
   handleClear() {
+    this.refs.textField.clearValue()
     this.props.onClear()
   },
 

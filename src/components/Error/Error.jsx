@@ -17,7 +17,7 @@ export default React.createClass({
       <div>
         <h2>Oh noes!</h2>
         <p>
-          <strong>Message:</strong> {this.props.statusText}
+          <strong>Message:</strong> {this.props.error.statusText || this.props.error.messsage}
         </p>
         <p>
           <strong>Code:</strong> {this.props.error.status}
