@@ -1,4 +1,5 @@
 import config from 'config'
+import fetch from 'isomorphic-fetch'
 
 class Summoner {
   constructor(response) {
@@ -22,7 +23,8 @@ class Summoner {
 }
 
 export function getSummoner(name) {
-  return fetch(`${config.apiHost}/api/summoners/${name}`)
+  let lowercaseName = name.toLowerCase()
+  return fetch(`${config.apiHost}/api/summoners/${lowercaseName}`)
     .then(response => {
       if (!response.ok) {
         throw response
